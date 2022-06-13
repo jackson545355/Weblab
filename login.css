@@ -1,0 +1,36 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+.container {
+    padding: 16px;
+  }
+  
+.container > input[type=text], input[type=password] {
+  width: 60%;
+  display: flex;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  margin: auto;
+}
+b{
+    margin-left: 20%;
+}
+.IN{
+    text-align: center;
+    font-size: 50px;
+}
+button {
+  margin-left: 20%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: 60%;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
