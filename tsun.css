@@ -27,7 +27,7 @@
 }
 
 .navbar {
-    width: 1200px;
+    width: 100%;
     height: 120px;
     margin: 0 auto;
     display: flex;
@@ -38,12 +38,14 @@
 
 .navbar-items {
     align-items: center;
+    flex: 3;
 }
 
 .navbar-logo {
-    display: block;
+    display: flex;
     height: 80%;
     padding: 20px;
+    flex: 1;
 }
 
 .navbar-logo > img {
@@ -99,6 +101,7 @@
 .navbar-right {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .navbar-right-items {
