@@ -30,33 +30,37 @@
         $password = md5($password);
           
     //Kiểm tra tên đăng nhập này đã có người dùng chưa
-    if (mysql_num_rows(mysql_query("SELECT username FROM member WHERE username='$username'")) > 0){
+    $mysqli = new mysqli("localhost","root","","data_user");
+    //$result = $mysqli->query("SELECT username FROM member WHERE username='$username');
+    //$row = $result->num_rows;
+
+    if (mysqli_num_rows(mysqli_query($mysqli,"SELECT username FROM member WHERE username='$username'")) > 0){
         echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
           
     //Kiểm tra email có đúng định dạng hay không
-    if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email))
+    if (!mb_eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email))
     {
         echo "Email này không hợp lệ. Vui long nhập email khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
           
     //Kiểm tra email đã có người dùng chưa
-    if (mysql_num_rows(mysql_query("SELECT email FROM member WHERE email='$email'")) > 0)
+    if (mysqli_num_rows(mysqli_query($mysqli,"SELECT email FROM member WHERE email='$email'")) > 0)
     {
         echo "Email này đã có người dùng. Vui lòng chọn Email khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
     //Kiểm tra dạng nhập vào của ngày sinh
-    if (!ereg("^[0-9]+/[0-9]+/[0-9]{2,4}", $birthday))
+    if (!mb_eregi("^[0-9]+/[0-9]+/[0-9]{2,4}", $birthday))
     {
             echo "Ngày tháng năm sinh không hợp lệ. Vui long nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
             exit;
         }
           
     //Lưu thông tin thành viên vào bảng
-    @$addmember = mysql_query("
+    @$addmember = mysqli_query($mysqli,"
         INSERT INTO member (
             username,
             password,

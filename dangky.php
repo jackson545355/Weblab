@@ -7,13 +7,14 @@
     <title>Assignment</title>
     <link rel="stylesheet" href="tsun-base.css">
     <link rel="stylesheet" href="tsun.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <div class="header">
         <div class="contact">
             <h3>Gmail@gmail.com | Hotline: 0123456789</h3>
-            <h4>Xin chào quý khách</h4>
+            <h4>Tặng cái đầu buoi`</h4>
             <form action="" class="search">
                 <input type="text" placeholder="Nhập cái gì đi" class="contact-input">
             </form>
@@ -41,7 +42,7 @@
                 
             </ul>
             <div class="navbar-right navbar-items">
-                <a href="login.php" class="navbar-right-items login">
+                <a href="login.php" class="navbar-right-items login" target="_blank">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <h4>Đăng nhập</h4></a>
                 <a href="#" class="navbar-right-items">
@@ -50,13 +51,42 @@
             </div>
         </nav>
     </div>
+<h1 class="IN" style="color: red;">Đăng Ký</h1>
+<form method="post" action="xuly.php">
+  <div class="container">
+    <b>Username</b>
+    <input type="text" placeholder="Enter Username" name="txtUsername" size="50"><br>
 
-    <div class="intro">
-        <h1>Giới thiệu</h1>
-        <p>TSUN là nhãn hiệu đầu tiên của G-Town và được thành lập vào năm 2016. TSUN là nhãn hiệu được biết đến là chuỗi của hàng bán quần áo mang phong cách đường phố và hiện đại dành cho giới trẻ với giá cả hợp lí nhất. TSUN là sự lựa chọ hàng đầu cho các tín đồ thời trang sành điệu. Sứ mệnh của TSUN là trao quyền cho thế hệ trẻ toàn thế giới tự do thể hiện phong cách thông qua thời trang, thương hiệu vượt qua ranh giới của thời trang streetwear bằng cách không ngừng sáng tạo các trang phục với các bộ sưu tập độc đáo. Tại TSUN, mỗi sản phẩm đều mang theo sự cá tính và sành điệu, đại diện cho hình ảnh giới trẻ hiện đại - biểu tượng cho sự dẫn đầu phong cách thời đại mới. </p><br>
-        <p>Quần áo có thể sẽ lỗi thời nhưng phong cách thời trang thì không. Tầm nhìn độc đáo của TSUN chính là để mỗi cá nhân tự do thể hiện phong cách khi khoác lên mình những sản phẩm được tạo nên từ sự đam mê, mang giá trị của thế hệ mới, đầy trẻ trung, năng động và luôn không ngừng khẳng định bản thân, hướng đến tương lai.</p><br>
-        <p> Sự đầu tư từ chất lượng đóng gói, bao bì sản phẩm đến mỗi thước phim, hình ảnh cho tới cách làm chủ được nghệ thuật sắc màu và chỉn chu trong từng chi tiết đã đưa TSUN trở thành một trong những thương hiệu thời trang đường phố được giới trẻ yêu thích, tin dùng hàng đầu tại Việt Nam.</p>
+    <b>Password</b>
+    <input type="password" placeholder="Enter Password" name="txtPassword" size="50"><br>
+
+    <b>Email</b>
+    <input type="text" placeholder="Enter Password" name="txtEmail" size="50"><br>
+
+    <b>Fullname</b>
+    <input type="text" placeholder="Enter Password" name="txtFullname" size="50"><br>
+
+    <b>Ngày sinh</b>
+    <input type="text" placeholder="Enter Password" name="txtBirthday" size="50"><br>
+
+    <b>Giới tính</b>
+    <select name="txtSex">
+        <option value=""></option>
+        <option value="Nam">Nam</option>
+        <option value="Nu">Nữ</option>
+    </select>
+    <br>
+        
+    <button type="submit">Đăng ký</button>
+    <br>
+    <br>
+    <button type="reset" class="cancelbtn">Nhập lại</button><br>
+    <div style="margin-left: 20% ; padding: 10px 10px;">
+    <label><input type="checkbox" checked="checked" name="remember"> Remember me </label>||
+    <span><a href="#">Forgot password?</a></span>
     </div>
+  </div>
+</form>
 
     <footer>
         <div class="grid footer-container">
@@ -67,7 +97,9 @@
             </div>
             <div class="footer-contact footer-item">
                 <i class="fa-solid fa-location-pin">Location</i>
-                <span>266-268 Lý Thường Kiệt</span>
+                <span>266 Lý Thường Kiệt</span>
+                <span>267 Lý Thường Kiệt</span>
+                <span>268 Lý Thường Kiệt</span>
             </div>
             <div class="footer-link footer-item">
                 <h1>Liên kết</h1>
@@ -79,7 +111,6 @@
             <div class="footer-fanpage">
                 <h1>Fanpage</h1>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/01_mega_logo.svg/1200px-01_mega_logo.svg.png" alt="">
-                <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/01_mega_logo.svg/1200px-01_mega_logo.svg.png" alt=""></a>
             </div>
         </div>       
     </footer>
