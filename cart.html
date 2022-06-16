@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
+    <link rel="stylesheet" href="Ao.css">
     <link rel="stylesheet" href="tsun-base.css">
     <link rel="stylesheet" href="tsun.css">
-    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
                 
             </ul>
             <div class="navbar-right navbar-items">
-                <a href="login.html" class="navbar-right-items login" target="_blank">
+                <a href="login.html" class="navbar-right-items login">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <h4>Đăng nhập</h4></a>
                 <a href="#" class="navbar-right-items">
@@ -51,25 +51,77 @@
             </div>
         </nav>
     </div>
-<h1 class="IN" style="color: red;">Đăng nhập</h1>
-<form method="post">
-  <div class="container">
-    <b>Username</b>
-    <input type="text" placeholder="Enter Username" name="txtUsername"><br>
+    <!--- cart -->
+    <section class="cart">
+        <div class="cart_contain">
+            <div class="cart_contain_cover">
+                <div class="cart_top">
+                    <div class="cart_top_cart cart_item">
+                        <i class="fa-solid fa-cart-shopping cart_item"></i>
+                    </div>
+                    <div class="cart_top_cart cart_item">
+                        <i class="fa-solid fa-location-crosshairs cart_item"></i>
+                    </div>
+                    <div class="cart_top_cart cart_item">
+                        <i class="fa-solid fa-money-check-dollar cart_item"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart_contain">
+            <div class="cart_mid">
+                <div class="cart_left">
+                    <table>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Màu</th>
+                            <th>Size</th>
+                            <th>Số lượng</th>
+                            <th>Tiền</th>
+                            <th>Xóa</th>
+                        </tr>
+                        <tr>
+                            <td><img src="https://product.hstatic.net/1000321269/product/typo2_944bb1d4ced343d2bc61c74d82e59656_master.jpg" alt=""></td>
+                            <td><h1>TSUN Typo Chrome Modern Tee - Black</h1></td>
+                            <td>Màu</td>
+                            <td>SIZE</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td><h1>300.000 <sup>Đ</sup></h1></td>
+                            <td><span>X</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cart_right">
+                    <table>
+                        <tr>
+                            <th colspan="2">Tổng tiền giỏ hàng</th>
+                        </tr>
+                        <tr>
+                            <td>Tổng sản phẩm</td>
+                            <td style="text-align: right">3</td>
+                        </tr>
+                        <tr>
+                            <td>Tổng tiền hàng</td>
+                            <td><h1>300.000 <sub>Đ</sub></h1></td>
+                        </tr>
+                        <tr>
+                            <td>Tạm tính</td>
+                            <td><h1>300.000 <sup>Đ</sup></h1></td>
+                        </tr>
+                    </table>
+                    <div class="cart_right_text">
+                        <h1>Bạn sẽ được miễn phí ship khi đơn hàng trên 1 triệu</h1>
+                    </div>
+                    <div class="cart_right_button">
+                        <a href="tsun.html"><button>Tiếp tục mua sắm</button></a>
+                        <button>Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <b>Password</b>
-    <input type="password" placeholder="Enter Password" name="txtPassword"><br>
-        
-    <button type="submit">Login</button>
-    <br>
-    <br>
-    <button type="button" class="cancelbtn">Cancel</button><br>
-    <div style="margin-left: 20% ; padding: 10px 10px;">
-    <label><input type="checkbox" checked="checked" name="remember"> Remember me </label>||
-    <span><a href="#">Forgot password?</a></span>
-    </div>
-  </div>
-</form>
 
     <footer>
         <div class="grid footer-container">
@@ -80,9 +132,7 @@
             </div>
             <div class="footer-contact footer-item">
                 <i class="fa-solid fa-location-pin">Location</i>
-                <span>266 Lý Thường Kiệt</span>
-                <span>267 Lý Thường Kiệt</span>
-                <span>268 Lý Thường Kiệt</span>
+                <span>266-268 Lý Thường Kiệt</span>
             </div>
             <div class="footer-link footer-item">
                 <h1>Liên kết</h1>
@@ -97,5 +147,6 @@
             </div>
         </div>       
     </footer>
+    <script src="SP.js"></script>
 </body>
-    </html>
+</html>
